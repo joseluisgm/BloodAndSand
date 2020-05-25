@@ -17,7 +17,7 @@ public class mover : MonoBehaviour
         spawn = posDisparo1;
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         direccion();
         disparar();
@@ -44,7 +44,7 @@ public class mover : MonoBehaviour
 
     private void disparar()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(proyectil,spawn.transform.position,transform.rotation);
         }

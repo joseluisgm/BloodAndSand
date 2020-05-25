@@ -33,6 +33,16 @@ public class Enemigos : MonoBehaviour
         gameObject.transform.position = nueva_posicion;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "disparo")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+
+        }
+    }
+
 
 
 

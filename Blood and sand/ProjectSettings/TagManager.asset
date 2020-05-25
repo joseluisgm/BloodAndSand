@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemigos
   - cambioDireccionEnemigo
+  - disparo
   layers:
   - Default
   - TransparentFX

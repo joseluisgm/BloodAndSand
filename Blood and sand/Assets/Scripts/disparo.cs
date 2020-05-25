@@ -16,10 +16,10 @@ public class disparo : MonoBehaviour
     void Update()
     {
         rb.AddForce(v, 0f, 0f);
-        StartCoroutine(eliminar(2f));
+        StartCoroutine(Eliminar(1f));
     }
 
-    IEnumerator eliminar(float s)
+    IEnumerator Eliminar(float s)
     {
         yield return new WaitForSeconds(s);
         Destroy(gameObject);

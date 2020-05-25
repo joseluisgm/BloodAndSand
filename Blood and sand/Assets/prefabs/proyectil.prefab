@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3843989868033241117}
   - component: {fileID: 323711044760625670}
   - component: {fileID: 1853693830324612357}
+  - component: {fileID: 5451876192552444572}
   m_Layer: 0
   m_Name: proyectil
-  m_TagString: Untagged
+  m_TagString: disparo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +111,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!114 &5451876192552444572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7242953568475551109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9580dc7724bbd9d4f9e5b39477d77bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
