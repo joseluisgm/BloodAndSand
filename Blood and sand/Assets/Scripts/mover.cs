@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mover : MonoBehaviour
 {
     // Start is called before the first frame update
-    float v = 5;
-    float s = 6.5f;
+    public static float v = 5;
+    public static float s = 6.5f;
     public GameObject proyectil;
     public GameObject posDisparo1;
     public GameObject posDisparo2;
     GameObject spawn;
+    public Text txtVida;
+    public Text txtOro;
+    public Text txtMuerto;
+    public static float vida;
+    public static float vidaMaxima=5;
+    public static float oro=0;
+
     void Start()
     {
+        vida = vidaMaxima;
+        txtMuerto.enabled = false;
         spawn = posDisparo1;
     }
     // Update is called once per frame
@@ -21,6 +31,7 @@ public class mover : MonoBehaviour
     {
         direccion();
         disparar();
+        estado();
     }
     private void direccion()
     {
@@ -50,4 +61,27 @@ public class mover : MonoBehaviour
         }
     }
 
+
+    public void btnpausa()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void estado()
+    {
+        txtVida.text = "vida: " + vida;
+        txtOro.text = "Oro: " + oro;
+        if (vida <= 0)
+        {
+            perder();
+            Destroy(gameObject);
+        }
+    }
+    private void perder()
+    {
+        txtOro.enabled = false;
+        txtVida.enabled = false;
+        txtMuerto.enabled = true;
+
+    }
 }

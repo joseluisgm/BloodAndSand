@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class dinero : MonoBehaviour
 {
+    public int valor = 0;
     // Start is called before the first frame update
+   
     void Start()
     {
         
@@ -20,6 +22,7 @@ public class dinero : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            mover.oro += valor;
             Destroy(gameObject);
         }
     }

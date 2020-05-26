@@ -41,6 +41,11 @@ public class Enemigos : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        if (other.gameObject.tag == "Player")
+        {
+            mover.vida -= 1;
+        }
     }
 
 

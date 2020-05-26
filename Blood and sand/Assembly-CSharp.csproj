@@ -67,12 +67,20 @@
     <Compile Include="Assets\Scripts\DE2.cs" />
     <Compile Include="Assets\Scripts\DE3.cs" />
     <Compile Include="Assets\Scripts\Enemigos.cs" />
+    <Compile Include="Assets\Scripts\MejoraSalto.cs" />
+    <Compile Include="Assets\Scripts\MejoraTienda.cs" />
+    <Compile Include="Assets\Scripts\MejoraVelocidad.cs" />
+    <Compile Include="Assets\Scripts\MejoraVida.cs" />
     <Compile Include="Assets\Scripts\cambioCamara.cs" />
     <Compile Include="Assets\Scripts\contadores.cs" />
     <Compile Include="Assets\Scripts\dinero.cs" />
     <Compile Include="Assets\Scripts\disparo.cs" />
     <Compile Include="Assets\Scripts\disparoEnemigo.cs" />
+    <Compile Include="Assets\Scripts\mejoraSTienda.cs" />
+    <Compile Include="Assets\Scripts\mejoraVtienda.cs" />
     <Compile Include="Assets\Scripts\mover.cs" />
+    <Compile Include="Assets\Scripts\vida.cs" />
+    <Compile Include="Assets\Scripts\vidaTienda.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/LuisG/Documents/GitHub/BloodAndSand/Blood and sand/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
