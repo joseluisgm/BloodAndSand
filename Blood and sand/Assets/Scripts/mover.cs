@@ -19,6 +19,7 @@ public class mover : MonoBehaviour
     public Text txtTienda1;
     public Text txtTienda2;
     public Text txtTienda3;
+    public Image jugador;
     public static float vida;
     public static float vidaMaxima=5;
     public static float oro=0;
@@ -58,12 +59,19 @@ public class mover : MonoBehaviour
         {
             this.transform.Translate(new Vector2( -v * Time.deltaTime,0));
             spawn = posDisparo2;
+            Vector3 lTemp = jugador.transform.localScale;
+            lTemp.x = 1;
+           jugador.transform.localScale = lTemp;
             disparo.v = -5f;
         }
+
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.Translate(new Vector2( v * Time.deltaTime,0));
             spawn = posDisparo1;
+            Vector3 lTemp = jugador.transform.localScale;
+            lTemp.x = -1;
+            jugador.transform.localScale = lTemp;
             disparo.v = 5f;
         }
     }

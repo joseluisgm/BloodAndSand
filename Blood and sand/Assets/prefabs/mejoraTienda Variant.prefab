@@ -62,10 +62,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1003544702213839517, guid: caf287809b90b4b4d977a5d5c93ac490,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6198152993427315416, guid: caf287809b90b4b4d977a5d5c93ac490,
         type: 3}
       propertyPath: m_Name
-      value: mejoraTienda
+      value: mejoraTienda Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf287809b90b4b4d977a5d5c93ac490, type: 3}
