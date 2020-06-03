@@ -15,10 +15,7 @@ public class mover : MonoBehaviour
     GameObject spawn;
     public Text txtVida;
     public Text txtOro;
-    public Text txtMuerto;
-    public Text txtTienda1;
-    public Text txtTienda2;
-    public Text txtTienda3;
+    public Text txtMuerto;    
     public Image jugador;
     public static float vida;
     public static float vidaMaxima=5;
@@ -30,10 +27,7 @@ public class mover : MonoBehaviour
     void Start()
     {
         vida = vidaMaxima;
-        txtMuerto.enabled = false;
-        txtTienda1.enabled = false;
-        txtTienda2.enabled = false;
-        txtTienda3.enabled = false;
+        txtMuerto.enabled = false;       
         bntM.gameObject.SetActive(false);
         bntC.gameObject.SetActive(false);
         bntS.gameObject.SetActive(false);
