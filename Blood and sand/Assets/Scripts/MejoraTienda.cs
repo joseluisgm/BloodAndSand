@@ -17,12 +17,13 @@ public class MejoraTienda : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (mover.oro == 100)
-        {
-            mover.oro -= 100;
+       
 
             if (other.gameObject.tag == "Player")
             {
+            if (mover.oro >= 100)
+            {
+                mover.oro -= 100;
                 mover.v += 3;
 
             }

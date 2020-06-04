@@ -23,7 +23,7 @@ public class mover : MonoBehaviour
     public Button bntC;
     public Button bntS;
     public Button bntM;
-
+    public GameObject camara;
     void Start()
     {
         vida = vidaMaxima;
@@ -42,6 +42,12 @@ public class mover : MonoBehaviour
         direccion();
         disparar();
         estado();
+        seguirCamara();
+    }
+
+    private void seguirCamara()
+    {
+        camara.gameObject.transform.SetPositionAndRotation(new Vector3(gameObject.transform.position.x,gameObject.transform.transform.position.y+2,0), Quaternion.identity);
     }
     private void direccion()
     {
@@ -123,6 +129,8 @@ public class mover : MonoBehaviour
         txtOro.enabled = false;
         txtVida.enabled = false;
         txtMuerto.enabled = true;
+        bntS.enabled = true;
+        bntS.gameObject.SetActive(true);
     }
 
     public static void guardar()

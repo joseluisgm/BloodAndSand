@@ -11,6 +11,7 @@ public class disparoEnemigo : MonoBehaviour
     public GameObject posDisparo1;
     public GameObject posDisparo2;
     public GameObject posDisparo3;
+    public static int vida = 15;
     GameObject spawn;
     GameObject spawn2;
     GameObject spawn3;
@@ -47,5 +48,22 @@ public class disparoEnemigo : MonoBehaviour
            Instantiate(DE1, spawn.transform.position, transform.rotation);
            Instantiate(DE2, spawn2.transform.position, transform.rotation);
            Instantiate(DE3, spawn3.transform.position, transform.rotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "disparo")
+        {
+            vida -= 1;
+            if (vida <= 0) {
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
+        }
+
+        if (other.gameObject.tag == "Player")
+        {
+            mover.vida -= 1;
+        }
     }
 }

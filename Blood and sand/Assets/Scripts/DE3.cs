@@ -24,4 +24,20 @@ public class DE3 : MonoBehaviour
         yield return new WaitForSeconds(s);
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "disparo")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+
+        }
+
+        if (other.gameObject.tag == "Player")
+        {
+            mover.vida -= 1;
+            Destroy(gameObject);
+        }
+    }
 }

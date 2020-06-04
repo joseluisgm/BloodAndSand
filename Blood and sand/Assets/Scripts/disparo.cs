@@ -24,4 +24,6 @@ public class disparo : MonoBehaviour
         yield return new WaitForSeconds(s);
         Destroy(gameObject);
     }
+
+     
 }

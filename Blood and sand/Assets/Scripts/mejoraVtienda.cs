@@ -17,17 +17,19 @@ public class mejoraVtienda : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (mover.oro == 100)
-        {
-            mover.oro -= 100;
-
+       
             if (other.gameObject.tag == "Player")
             {
+            if (mover.oro >= 100)
+            {
+                mover.oro -= 100;
                 mover.vidaMaxima += 5;
-                mover.vida = mover.vidaMaxima;                
+                mover.vida = mover.vidaMaxima;
+            }
+                            
             }
 
 
-        }
+        
     }
 }
