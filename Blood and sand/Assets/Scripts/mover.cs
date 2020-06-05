@@ -136,6 +136,7 @@ public class mover : MonoBehaviour
     public static void guardar()
     {
         PlayerPrefs.SetFloat("vida", vida);
+        PlayerPrefs.SetFloat("vidaMaxima", vidaMaxima);
         PlayerPrefs.SetFloat("oro", oro);
         PlayerPrefs.SetFloat("v", v);
         PlayerPrefs.SetFloat("s", s);
@@ -144,6 +145,7 @@ public class mover : MonoBehaviour
     public static void cargar() 
     {
         PlayerPrefs.GetFloat("vida", vida);
+        PlayerPrefs.GetFloat("vidaMaxima", vidaMaxima);
         PlayerPrefs.GetFloat("oro", oro);
         PlayerPrefs.GetFloat("v", v);
         PlayerPrefs.GetFloat("s", s);
@@ -151,6 +153,7 @@ public class mover : MonoBehaviour
 
     public static void reseteo()
     {
+        vidaMaxima = 5;
         v = 5;
         s = 6.5f;
         vida = 5;
