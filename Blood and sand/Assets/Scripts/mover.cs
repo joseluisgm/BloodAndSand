@@ -7,6 +7,17 @@ using UnityEngine.UI;
 public class mover : MonoBehaviour
 {
     // Start is called before the first frame update
+    /*v es la velocidad del jugador 
+     *s es la fuerza del salto
+     *proyectil es el objeto que invocamos desde el juego
+     *posDisparo1,2 es donde aparecera del objeto
+     *spawn es la primera posicion del objeto
+     * txtVida,oro,Muerto , son los labes de la interfaz grafica
+     * image jugador es la imagen del jugador
+     * float vida,vidaMaxima,oro son los valores numericos del jugador
+     * button bntC,S,M son los botones de la interfaz grafica 
+     * gameObject camara es la camara que sigue al jugador por todo el escenario
+     */
     public static float v = 5;
     public static float s = 6.5f;
     public GameObject proyectil;
@@ -26,6 +37,7 @@ public class mover : MonoBehaviour
     public GameObject camara;
     void Start()
     {
+        //pirmero ocultamos los botones y los textos que no necesitamos , damos valores a la vida y la vida maxima 
         vida = vidaMaxima;
         txtMuerto.enabled = false;       
         bntM.gameObject.SetActive(false);
@@ -47,10 +59,12 @@ public class mover : MonoBehaviour
 
     private void seguirCamara()
     {
+        //esta funcion sigue al jugador con la camara todo el rato 
         camara.gameObject.transform.SetPositionAndRotation(new Vector3(gameObject.transform.position.x,gameObject.transform.transform.position.y+2,0), Quaternion.identity);
     }
     private void direccion()
     {
+        //funcion que hace que el jugador pueda moverse actualizando la imagen cada vez que se mueve y el punto de disparo , tambien saltar
         if (Input.GetKey(KeyCode.W))
         {
             this.transform.Translate(new Vector2(0, s * Time.deltaTime));          
@@ -78,6 +92,7 @@ public class mover : MonoBehaviour
 
     private void disparar()
     {
+        //funcion que cuando pulsas la telca E invoca un proyectil
         if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(proyectil,spawn.transform.position,transform.rotation);
@@ -86,6 +101,7 @@ public class mover : MonoBehaviour
 
 
     public void btnpausa()
+        //boton que pausa el juego y enseña el menu de pausa 
     {
         if (Time.timeScale == 1)
         {           
@@ -115,6 +131,7 @@ public class mover : MonoBehaviour
    
 
     private void estado()
+        //funcion que comprueba todo el rato el estado del jugador 
     {
         txtVida.text = "vida: " + vida;
         txtOro.text = "Oro: " + oro;
@@ -125,6 +142,7 @@ public class mover : MonoBehaviour
         }
     }
     private void perder()
+        //funcion que cuando la vida llega a 0 se activa haciendo un perder 
     {
         txtOro.enabled = false;
         txtVida.enabled = false;
@@ -134,6 +152,7 @@ public class mover : MonoBehaviour
     }
 
     public static void guardar()
+        //funcion que guarda los datos del jugador en la base de datos interna de Unity
     {
         PlayerPrefs.SetFloat("vida", vida);
         PlayerPrefs.SetFloat("vidaMaxima", vidaMaxima);
@@ -142,7 +161,8 @@ public class mover : MonoBehaviour
         PlayerPrefs.SetFloat("s", s);
     }
 
-    public static void cargar() 
+    public static void cargar()
+    //funcion que carga los datos del jugador en la base de datos interna de Unity
     {
         PlayerPrefs.GetFloat("vida", vida);
         PlayerPrefs.GetFloat("vidaMaxima", vidaMaxima);
@@ -153,6 +173,7 @@ public class mover : MonoBehaviour
 
     public static void reseteo()
     {
+        //funcion que resetea los valores del jugador para empezar de nuevo 
         vidaMaxima = 5;
         v = 5;
         s = 6.5f;

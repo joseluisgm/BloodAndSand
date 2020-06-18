@@ -19,6 +19,7 @@ public class vida : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //evento que cuando la hitbox de la vida colisiona con el jugador le da vida si le falta 
         if (other.gameObject.tag == "Player")
         {
             if (mover.vida != mover.vidaMaxima)

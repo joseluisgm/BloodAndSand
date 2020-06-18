@@ -19,6 +19,9 @@ public class CambioEscena : MonoBehaviour
 
     public void cambioAJuego()
     {
+        /*
+         *esta funcion es la que cambia del menu de inicio al juego y resetea todo el progreso 
+         */
         Time.timeScale = 1;
         PlayerPrefs.DeleteAll();
         mover.reseteo();
@@ -27,12 +30,18 @@ public class CambioEscena : MonoBehaviour
     }
     public void cambioAJuegoAmedias()
     {
+        /*
+         *esta funcion es la que cambia del menu de inicio al juego y carga el progreso del playerPrefs
+         */
         Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
         mover.cargar();
     }
     public void cambioAMenu()
     {
+        /*
+         *esta funcion es la que cambia del juego al menu y guarda todo el progreso 
+         */
         Time.timeScale = 1;
         mover.guardar();
         SceneManager.LoadScene("inicio");
@@ -40,7 +49,10 @@ public class CambioEscena : MonoBehaviour
 
     public void cambioAudio()
     {
-      if(  AudioListener.volume == 0)
+        /*
+         *esta funcion es la que cambia el sonido a apagado o encendido 
+         */
+        if (  AudioListener.volume == 0)
         {
             AudioListener.volume = 1;
         }else if (AudioListener.volume == 1){
@@ -50,6 +62,9 @@ public class CambioEscena : MonoBehaviour
 
     public void salir()
     {
+        /*
+         *esta funcion es la que cierra el juego 
+         */
         Application.Quit();
     }
 }

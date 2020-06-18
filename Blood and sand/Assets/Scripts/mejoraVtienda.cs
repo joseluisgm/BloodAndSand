@@ -17,8 +17,8 @@ public class mejoraVtienda : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       
-            if (other.gameObject.tag == "Player")
+        //evento que cuando la hitbox de la mejora de vida colisiona con el jugador y tiene oro compra la mejora de vida
+        if (other.gameObject.tag == "Player")
             {
             if (mover.oro >= 100)
             {

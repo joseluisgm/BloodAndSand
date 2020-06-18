@@ -18,6 +18,7 @@ public class MejoraVida : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //evento cuando colisiona con la mejora de vida se le aplica al jugador y se elimina del mapa 
         if (other.gameObject.tag == "Player")
         {
             mover.vidaMaxima += 5;

@@ -18,6 +18,7 @@ public class vidaTienda : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        //evento que cuando la hitbox de la vida colisiona con el jugador le da vida si le falta y si tiene dienero suficiente para pagarlo
         if (mover.oro == 10)
         {
             mover.oro -= 10;

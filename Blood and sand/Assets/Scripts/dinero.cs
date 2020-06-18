@@ -20,6 +20,7 @@ public class dinero : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //evento que cuando la hitbox del dinero colisiona con el jugador le da dinero
         if (other.gameObject.tag == "Player")
         {
             mover.oro += valor;

@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class disparoEnemigo : MonoBehaviour
 {
-
+    /*
+     * De1,2,3 son las clases de disparo
+     * posDisparo1,2,3 son las posiciones de disparo
+     * spawn1,2,3 es donde aparece el proyectil
+     * temp son variables temporares 
+     */
     public GameObject DE1;
     public GameObject DE2;
     public GameObject DE3;
@@ -18,6 +23,7 @@ public class disparoEnemigo : MonoBehaviour
     float temp = 0;
     float temp1 = 0;
     // Start is called before the first frame update
+    //le damos los valores a las variables temporales 
     void Start()
     {
         temp1 = 500;
@@ -29,6 +35,7 @@ public class disparoEnemigo : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+        //es un temporizador de disparo
     {
         if (temp > 0)
         {
@@ -44,13 +51,14 @@ public class disparoEnemigo : MonoBehaviour
 
     private void disparar()
     {
-        
+        //llama a las clase de prollectil y las instancia 
            Instantiate(DE1, spawn.transform.position, transform.rotation);
            Instantiate(DE2, spawn2.transform.position, transform.rotation);
            Instantiate(DE3, spawn3.transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter(Collider other)
+        //evento on trigger 
     {
         if (other.gameObject.tag == "disparo")
         {

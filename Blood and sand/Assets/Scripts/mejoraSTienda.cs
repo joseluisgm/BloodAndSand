@@ -18,7 +18,7 @@ public class mejoraSTienda : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        //evento que cuando la hitbox de la mejora de salto colisiona con el jugador y tiene oro compra la mejora de salto
         if (other.gameObject.tag == "Player")
         {
             if (mover.oro >= 100)
