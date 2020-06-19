@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - MejoraTienda
     - MejoraVelocidad
     - MejoraVida
+    - desparoEnemigo2
     - dinero
     - disparo
     - disparoEnemigo
@@ -76,51 +77,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12510}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 12818}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13552}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13554}
     - Class: 114
-      Script: {instanceID: 14178}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 14262}
+      Script: {instanceID: 14180}
+    - Class: 114
+      Script: {instanceID: 14264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,21 +164,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 14262}
+      Script: {instanceID: 14264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -391,6 +394,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: ded9f0ebf886dd230ab888a6e0c91bb2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: desparoEnemigo2
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
