@@ -65,7 +65,7 @@ public class mover : MonoBehaviour
     private void direccion()
     {
         //funcion que hace que el jugador pueda moverse actualizando la imagen cada vez que se mueve y el punto de disparo , tambien saltar
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W)) 
         {
             this.transform.Translate(new Vector2(0, s * Time.deltaTime));          
         }
