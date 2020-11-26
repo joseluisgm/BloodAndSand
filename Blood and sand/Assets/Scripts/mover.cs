@@ -19,7 +19,7 @@ public class mover : MonoBehaviour
      * gameObject camara es la camara que sigue al jugador por todo el escenario
      */
     public static float v = 5;
-    public static float s = 6.5f;
+    public static float s = 8.5f;
     public GameObject proyectil;
     public GameObject posDisparo1;
     public GameObject posDisparo2;
@@ -35,6 +35,7 @@ public class mover : MonoBehaviour
     public Button bntS;
     public Button bntM;
     public GameObject camara;
+    int contador = 0;
     void Start()
     {
         //pirmero ocultamos los botones y los textos que no necesitamos , damos valores a la vida y la vida maxima 
@@ -45,7 +46,7 @@ public class mover : MonoBehaviour
         bntS.gameObject.SetActive(false);
         bntM.enabled = false;
         bntC.enabled = false;
-        bntS.enabled = false;
+        bntS.enabled = false;     
         spawn = posDisparo1;
     }
     // Update is called once per frame
@@ -65,9 +66,14 @@ public class mover : MonoBehaviour
     private void direccion()
     {
         //funcion que hace que el jugador pueda moverse actualizando la imagen cada vez que se mueve y el punto de disparo , tambien saltar
-        if (Input.GetKeyDown(KeyCode.W)) 
+        if (Input.GetKey(KeyCode.W)) 
         {
-            this.transform.Translate(new Vector2(0, s * Time.deltaTime));          
+            if (contador < 100) {
+                this.transform.Translate(new Vector2(0, s * Time.deltaTime));
+             }
+            contador++;
+
+
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -181,4 +187,16 @@ public class mover : MonoBehaviour
         oro = 0;
     }
 
-}
+    private void OnTriggerEnter(Collider other)
+    {
+        // evento para limitar salto
+        if (other.gameObject.tag == "suelo")
+        {
+            contador = 0;
+
+        }
+    }
+
+
+
+    }

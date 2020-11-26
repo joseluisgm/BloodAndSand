@@ -52,9 +52,12 @@ public class desparoEnemigo2 : MonoBehaviour
     private void disparar()
     {
         //llama a las clase de prollectil y las instancia 
-        Instantiate(DE1, spawn.transform.position, transform.rotation);
-        Instantiate(DE2, spawn2.transform.position, transform.rotation);
-        Instantiate(DE3, spawn3.transform.position, transform.rotation);
+        if (Time.timeScale == 1)
+        {
+            Instantiate(DE1, spawn.transform.position, transform.rotation);
+            Instantiate(DE2, spawn2.transform.position, transform.rotation);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
