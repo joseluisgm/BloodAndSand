@@ -19,7 +19,7 @@ public class mover : MonoBehaviour
      * gameObject camara es la camara que sigue al jugador por todo el escenario
      */
     public static float v = 5;
-    public static float s = 8.5f;
+    public static float s = 400f;
     public GameObject proyectil;
     public GameObject posDisparo1;
     public GameObject posDisparo2;
@@ -66,10 +66,11 @@ public class mover : MonoBehaviour
     private void direccion()
     {
         //funcion que hace que el jugador pueda moverse actualizando la imagen cada vez que se mueve y el punto de disparo , tambien saltar
-        if (Input.GetKey(KeyCode.W)) 
+        if (Input.GetKeyDown(KeyCode.W)) 
         {
-            if (contador < 100) {
+            if (contador < 2) {
                 this.transform.Translate(new Vector2(0, s * Time.deltaTime));
+                
              }
             contador++;
 
