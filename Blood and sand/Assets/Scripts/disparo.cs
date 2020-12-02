@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class disparo : MonoBehaviour
 {
-    public static float v = 5f;
+    public static float v = 10f;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class disparo : MonoBehaviour
     {
         //añade fuerza al proyectil y empieza el tempoizador de eliminar
         rb.AddForce(v, 0f, 0f);
-        StartCoroutine(Eliminar(1f));
+        StartCoroutine(Eliminar(0.6f));
     }
 
     IEnumerator Eliminar(float s)

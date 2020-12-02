@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class mover : MonoBehaviour
      * gameObject camara es la camara que sigue al jugador por todo el escenario
      */
     public static float v = 5;
-    public static float s = 400f;
+    public static float s = 300f;
     public GameObject proyectil;
     public GameObject posDisparo1;
     public GameObject posDisparo2;
@@ -35,7 +36,10 @@ public class mover : MonoBehaviour
     public Button bntS;
     public Button bntM;
     public GameObject camara;
+    private Rigidbody m_Rigidbody;
     int contador = 0;
+    int municion = 0;
+    
     void Start()
     {
         //pirmero ocultamos los botones y los textos que no necesitamos , damos valores a la vida y la vida maxima 
@@ -48,6 +52,7 @@ public class mover : MonoBehaviour
         bntC.enabled = false;
         bntS.enabled = false;     
         spawn = posDisparo1;
+       
     }
     // Update is called once per frame
     void Update()
@@ -56,6 +61,7 @@ public class mover : MonoBehaviour
         disparar();
         estado();
         seguirCamara();
+
     }
 
     private void seguirCamara()
@@ -68,11 +74,13 @@ public class mover : MonoBehaviour
         //funcion que hace que el jugador pueda moverse actualizando la imagen cada vez que se mueve y el punto de disparo , tambien saltar
         if (Input.GetKeyDown(KeyCode.W)) 
         {
+          
             if (contador < 2) {
                 this.transform.Translate(new Vector2(0, s * Time.deltaTime));
-                
-             }
-            contador++;
+                contador++;
+
+            }
+           
 
 
         }
@@ -81,28 +89,41 @@ public class mover : MonoBehaviour
             this.transform.Translate(new Vector2( -v * Time.deltaTime,0));
             spawn = posDisparo2;
             Vector3 lTemp = jugador.transform.localScale;
-            lTemp.x = 1;
+            lTemp.x = -1;
            jugador.transform.localScale = lTemp;
             disparo.v = -5f;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+          
             this.transform.Translate(new Vector2( v * Time.deltaTime,0));
             spawn = posDisparo1;
             Vector3 lTemp = jugador.transform.localScale;
-            lTemp.x = -1;
+            lTemp.x = 1;
             jugador.transform.localScale = lTemp;
             disparo.v = 5f;
         }
+        //restablece el contador de la municion 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            municion=0;
+        }
+        
     }
 
     private void disparar()
     {
-        //funcion que cuando pulsas la telca E invoca un proyectil
+        //funcion que cuando pulsas la telca E invoca un proyectil y para limitar su  uso  solo lo invoca 10 veces 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(proyectil,spawn.transform.position,transform.rotation);
+            if(municion < 5) {
+                Instantiate(proyectil, spawn.transform.position, transform.rotation);
+                municion++;
+            }
+           
+
+
         }
     }
 
@@ -199,5 +220,7 @@ public class mover : MonoBehaviour
     }
 
 
+   
 
-    }
+
+}
