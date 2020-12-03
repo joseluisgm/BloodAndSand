@@ -47,6 +47,9 @@ public class CambioEscena : MonoBehaviour
         SceneManager.LoadScene("inicio");
     }
 
+   
+
+
     public void cambioAudio()
     {
         /*
@@ -67,4 +70,8 @@ public class CambioEscena : MonoBehaviour
          */
         Application.Quit();
     }
+
+  
+
+
 }

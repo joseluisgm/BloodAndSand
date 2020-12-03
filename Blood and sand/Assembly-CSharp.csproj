@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\MejoraTienda.cs" />
     <Compile Include="Assets\Scripts\MejoraVelocidad.cs" />
     <Compile Include="Assets\Scripts\MejoraVida.cs" />
+    <Compile Include="Assets\Scripts\cambioMapa.cs" />
     <Compile Include="Assets\Scripts\desparoEnemigo2.cs" />
     <Compile Include="Assets\Scripts\dinero.cs" />
     <Compile Include="Assets\Scripts\disparo.cs" />

@@ -8,6 +8,7 @@ TagManager:
   - cambioDireccionEnemigo
   - disparo
   - suelo
+  - mapa2
   layers:
   - Default
   - TransparentFX
