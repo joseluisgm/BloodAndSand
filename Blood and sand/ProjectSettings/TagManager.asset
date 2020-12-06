@@ -9,6 +9,10 @@ TagManager:
   - disparo
   - suelo
   - mapa2
+  - no-salto
+  - bajar
+  - no-bajar
+  - salto
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,9 @@ public class mover : MonoBehaviour
      * gameObject camara es la camara que sigue al jugador por todo el escenario
      */
     public static float v = 5;
-    public static float s = 300f;
+    public static float s = 500f;
+    public static float b = 320f;
+
     public GameObject proyectil;
     public GameObject posDisparo1;
     public GameObject posDisparo2;
@@ -37,7 +39,8 @@ public class mover : MonoBehaviour
     public Button bntM;
     public GameObject camara;
     private Rigidbody m_Rigidbody;
-    int contador = 0;
+    public Boolean salto = false;
+    public Boolean bajar = false;
     int municion = 0;
     
     void Start()
@@ -75,34 +78,48 @@ public class mover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) 
         {
           
-            if (contador < 2) {
-                this.transform.Translate(new Vector2(0, s * Time.deltaTime));
-                contador++;
+            if (salto==true) {
 
+                v = 0;
+                this.transform.Translate(new Vector2(0, s * Time.deltaTime));
+                salto = false;
             }
            
 
 
         }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (bajar == true)
+            {
+                v = 0;
+                this.transform.Translate(new Vector2(0, -b * Time.deltaTime));
+                bajar = false;
+            }
+        }
+
         if (Input.GetKey(KeyCode.A))
         {
+            v = 5;
             this.transform.Translate(new Vector2( -v * Time.deltaTime,0));
             spawn = posDisparo2;
             Vector3 lTemp = jugador.transform.localScale;
             lTemp.x = -1;
            jugador.transform.localScale = lTemp;
             disparo.v = -5f;
+           
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-          
+            v = 5;
             this.transform.Translate(new Vector2( v * Time.deltaTime,0));
             spawn = posDisparo1;
             Vector3 lTemp = jugador.transform.localScale;
             lTemp.x = 1;
             jugador.transform.localScale = lTemp;
             disparo.v = 5f;
+          
         }
         //restablece el contador de la municion 
         if (Input.GetKeyDown(KeyCode.R))
@@ -212,11 +229,30 @@ public class mover : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // evento para limitar salto
-        if (other.gameObject.tag == "suelo")
+        if (other.gameObject.tag == "salto")
         {
-            contador = 0;
+            salto = true;
 
         }
+
+        if (other.gameObject.tag == "no-salto")
+        {
+            salto = false;
+
+        }
+
+        if (other.gameObject.tag == "bajar")
+        {
+            bajar = true;
+
+        }
+
+        if (other.gameObject.tag == "no-bajar")
+        {
+            bajar = false;
+
+        }
+
     }
 
 
