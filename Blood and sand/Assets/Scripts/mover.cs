@@ -20,8 +20,8 @@ public class mover : MonoBehaviour
      * gameObject camara es la camara que sigue al jugador por todo el escenario
      */
     public static float v = 5;
-    public static float s = 500f;
-    public static float b = 320f;
+    public static float s = 425f;
+    public static float b = 275f;
 
     public GameObject proyectil;
     public GameObject posDisparo1;
@@ -81,7 +81,8 @@ public class mover : MonoBehaviour
             if (salto==true) {
 
                 v = 0;
-                this.transform.Translate(new Vector2(0, s * Time.deltaTime));
+              
+                this.transform.Translate(new Vector2(0, 3));
                 salto = false;
             }
            
@@ -93,7 +94,8 @@ public class mover : MonoBehaviour
             if (bajar == true)
             {
                 v = 0;
-                this.transform.Translate(new Vector2(0, -b * Time.deltaTime));
+                
+                this.transform.Translate(new Vector2(0, -2));
                 bajar = false;
             }
         }

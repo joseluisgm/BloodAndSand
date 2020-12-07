@@ -16,7 +16,7 @@ public class desparoEnemigo2 : MonoBehaviour
     public GameObject posDisparo1;
     public GameObject posDisparo2;
     public GameObject posDisparo3;
-    public static int vida = 25;
+    public static int vida = 1;
     GameObject spawn;
     GameObject spawn2;
     GameObject spawn3;

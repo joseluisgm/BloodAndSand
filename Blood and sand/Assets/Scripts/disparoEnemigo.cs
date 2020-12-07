@@ -10,13 +10,12 @@ public class disparoEnemigo : MonoBehaviour
      * spawn1,2,3 es donde aparece el proyectil
      * temp son variables temporares 
      */
-    public GameObject DE1;
-    public GameObject DE2;
-    public GameObject DE3;
-    public GameObject posDisparo1;
+    public GameObject DE1; public GameObject DE2;
+  
+   
     public GameObject posDisparo2;
-    public GameObject posDisparo3;
-    public static int vida = 15;
+ 
+    public static int vida = 2;
     GameObject spawn;
     GameObject spawn2;
     GameObject spawn3;
@@ -27,9 +26,9 @@ public class disparoEnemigo : MonoBehaviour
     void Start()
     {
         temp1 = 500;
-        spawn = posDisparo1;
+       
         spawn2 = posDisparo2;
-        spawn3 = posDisparo3;
+      
         temp = temp1;
     }
 
@@ -53,7 +52,7 @@ public class disparoEnemigo : MonoBehaviour
     {
         //llama a las clase de proyectil y las instancia 
         if (Time.timeScale == 1) {
-            Instantiate(DE1, spawn.transform.position, transform.rotation);
+            
             Instantiate(DE2, spawn2.transform.position, transform.rotation);          
         }
           
@@ -73,6 +72,7 @@ public class disparoEnemigo : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
+            Destroy(gameObject);
             mover.vida -= 1;
         }
     }

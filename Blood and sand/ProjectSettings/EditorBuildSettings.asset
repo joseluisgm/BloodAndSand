@@ -9,12 +9,45 @@ EditorBuildSettings:
     path: Assets/Scenes/inicio.unity
     guid: 09aa293abdeea7b41ac27726586d4577
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/mapa2.unity
     guid: e04b6f13112d4994fa8666b62a03c204
   - enabled: 1
+    path: Assets/Scenes/mapa2_2.unity
+    guid: 1a7d6fe16a5260841803ab5d595dadf9
+  - enabled: 1
+    path: Assets/Scenes/mapa2_3.unity
+    guid: b28af378ead9384448c9ac2a7aeae475
+  - enabled: 1
+    path: Assets/Scenes/mapa3.unity
+    guid: 4757c1f8c6ac5444f839d58e6597b175
+  - enabled: 1
+    path: Assets/Scenes/mapa4.unity
+    guid: ee571984362f7d74f841e3204ccc2550
+  - enabled: 1
+    path: Assets/Scenes/mapa4_2.unity
+    guid: cb197a948a2db894cae630eefc466f57
+  - enabled: 1
+    path: Assets/Scenes/mapa5.unity
+    guid: 6ac9119976eafbb44803cd6a55e752cb
+  - enabled: 1
+    path: Assets/Scenes/mapa5_2.unity
+    guid: 5a365ac3a6a570546b5ef453986c32a7
+  - enabled: 1
+    path: Assets/Scenes/mapa6.unity
+    guid: 7d0ede0806b7cd1459f41844a0453743
+  - enabled: 1
+    path: Assets/Scenes/mapa6_2.unity
+    guid: 790b379be8684da4796c2a8e6a75ac55
+  - enabled: 1
     path: Assets/Scenes/tienda.unity
     guid: 8ebba03ae657295478c8c311c72cebfa
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SampleScene_3.unity
+    guid: 529361716e936114db9db8a0e705e8d4
+  - enabled: 1
+    path: Assets/Scenes/SampleScene_2.unity
+    guid: e4498e231aa4d15498e1933ce88e3eec
   m_configObjects: {}
