@@ -23,7 +23,7 @@ public class cambioMapa5_b : MonoBehaviour
         {
             mover.guardar();
             mover.cargar();
-            SceneManager.LoadScene("mapa2");
+            SceneManager.LoadScene("mapa5_2");
         }
 
 
