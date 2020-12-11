@@ -22,7 +22,8 @@ public class cambioMapa : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
-    {     
+    {
+        //evento triguer que funciona para cambiar al mapa que se indica en el String de loadScene
         if (other.gameObject.tag == "Player")
         {
             mover.guardar();
